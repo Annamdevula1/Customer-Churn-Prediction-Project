@@ -132,25 +132,6 @@ Customer-Churn-Prediction/
 
 ---
 
-## ▶️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/Customer-Churn-Prediction.git
-```
-
-Install the required libraries:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the Streamlit application:
-
-```bash
-streamlit run app.py
-```
 
 ---
 
