@@ -11,6 +11,7 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
+st.image("project image.jpeg, width="stretch")
 
 st.title("📊 Customer Churn Prediction System")
 st.markdown("Predict whether a customer is likely to stay or churn.")
@@ -245,7 +246,7 @@ if st.button("Predict Customer Status"):
 st.header("📊 Data Visualizations")
 
 st.subheader("Customer Status")
-st.image("graphs/Customer_Status.jpeg", width="stretch")
+st.image("Customer_Status.jpeg", width="stretch")
 
 st.subheader("Contract vs Customer Status")
 st.image("graphs/Contract_vs_Customer_Status.jpeg", width="stretch")
