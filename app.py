@@ -249,55 +249,55 @@ st.subheader("Customer Status")
 st.image("Customer_Status.jpeg", width="stretch")
 
 st.subheader("Contract vs Customer Status")
-st.image("graphs/Contract_vs_Customer_Status.jpeg", width="stretch")
+st.image("Contract_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Monthly Charge Distribution")
-st.image("graphs/Monthly_Charge_Distribution.jpeg", width="stretch")
+st.image("Monthly_Charge_Distribution.jpeg", width="stretch")
 
 st.subheader("Tenure in Months Distribution")
-st.image("graphs/Tenure_in_Months_Distribution.jpeg", width="stretch")
+st.image("Tenure_in_Months_Distribution.jpeg", width="stretch")
 
 st.subheader("Monthly Charge vs Customer Status")
-st.image("graphs/Monthly_Charge_vs_Customer_Status.jpeg", width="stretch")
+st.image("Monthly_Charge_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Internet Type vs Customer Status")
-st.image("graphs/Internet_Type_vs_Customer_Status.jpeg", width="stretch")
+st.image("Internet_Type_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Correlation Heatmap")
-st.image("graphs/Correlation_Heatmap.jpeg", width="stretch")
+st.image("Correlation_Heatmap.jpeg", width="stretch")
 
 st.subheader("Gender vs Customer Status")
-st.image("graphs/Gender_vs_Customer_Status.jpeg", width="stretch")
+st.image("Gender_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Payment Method vs Customer Status")
-st.image("graphs/Payment_Method_vs_Customer_Status.jpeg", width="stretch")
+st.image("Payment_Method_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Online Security vs Customer Status")
-st.image("graphs/Online_Security_vs_Customer_Status.jpeg", width="stretch")
+st.image("Online_Security_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Premium Tech Support vs Customer Status")
-st.image("graphs/Premium_Tech_Support_vs_Customer_Status.jpeg", width="stretch")
+st.image("Premium_Tech_Support_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Total Charges Distribution")
-st.image("graphs/Total_Charges_Distribution.jpeg", width="stretch")
+st.image("Total_Charges_Distribution.jpeg", width="stretch")
 
 st.subheader("Total Charges vs Customer Status")
-st.image("graphs/Total_Charges_vs_Customer_Status.jpeg", width="stretch")
+st.image("Total_Charges_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Customer Status Distribution (Pie Chart)")
-st.image("graphs/Customer_Status_Distribution_Pie.jpeg", width="stretch")
+st.image("Customer_Status_Distribution_Pie.jpeg", width="stretch")
 
 st.subheader("Age Distribution")
-st.image("graphs/Age_Distribution.jpeg", width="stretch")
+st.image("Age_Distribution.jpeg", width="stretch")
 
 st.subheader("Married vs Customer Status")
-st.image("graphs/Married_vs_Customer_Status.jpeg", width="stretch")
+st.image("Married_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Phone Service vs Customer Status")
-st.image("graphs/Phone_Service_vs_Customer_Status.jpeg", width="stretch")
+st.image("Phone_Service_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Streaming TV vs Customer Status")
-st.image("graphs/Streaming_TV_vs_Customer_Status.jpeg", width="stretch")
+st.image("Streaming_TV_vs_Customer_Status.jpeg", width="stretch")
 # ---------------- Footer ----------------
 
 st.markdown("---")
