@@ -2,24 +2,27 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load Model
-model = joblib.load("trained_model.pkl")
+# Load Model and Label Encoders
+model = joblib.load("customer_churn_model.pkl")
+label_encoders = joblib.load("label_encoders.pkl")
 
 st.set_page_config(
     page_title="Customer Churn Prediction",
     page_icon="📊",
     layout="wide"
 )
-st.image("project image.jpeg,width="stretch")
 
-st.title("📊 Customer Churn Prediction ")
+st.title("📊 Customer Churn Prediction System")
 st.markdown("Predict whether a customer is likely to stay or churn.")
 
 st.sidebar.title("Customer Details")
 
 # Customer Information
 
-gender = st.sidebar.selectbox("Gender", ["Male", "Female"])
+gender = st.sidebar.selectbox(
+    "Gender",
+    ["Male", "Female"]
+)
 
 age = st.sidebar.number_input(
     "Age",
@@ -56,12 +59,12 @@ tenure = st.sidebar.number_input(
 
 offer = st.sidebar.selectbox(
     "Offer",
-    ["None", "Offer A", "Offer B", "Offer C", "Offer D", "Offer E"]
+    ["None","Offer A","Offer B","Offer C","Offer D","Offer E"]
 )
 
 phone_service = st.sidebar.selectbox(
     "Phone Service",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 avg_long_distance = st.sidebar.number_input(
@@ -72,71 +75,67 @@ avg_long_distance = st.sidebar.number_input(
 
 multiple_lines = st.sidebar.selectbox(
     "Multiple Lines",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 internet_service = st.sidebar.selectbox(
     "Internet Service",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 internet_type = st.sidebar.selectbox(
     "Internet Type",
-    ["DSL", "Fiber Optic", "Cable", "None"]
+    ["DSL","Fiber Optic","Cable","None"]
 )
 
 online_security = st.sidebar.selectbox(
     "Online Security",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 online_backup = st.sidebar.selectbox(
     "Online Backup",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 device_protection = st.sidebar.selectbox(
     "Device Protection Plan",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 premium_support = st.sidebar.selectbox(
     "Premium Tech Support",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 streaming_tv = st.sidebar.selectbox(
     "Streaming TV",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 streaming_movies = st.sidebar.selectbox(
     "Streaming Movies",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 unlimited_data = st.sidebar.selectbox(
     "Unlimited Data",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 contract = st.sidebar.selectbox(
     "Contract",
-    ["Month-to-Month", "One Year", "Two Year"]
+    ["Month-to-Month","One Year","Two Year"]
 )
 
 paperless = st.sidebar.selectbox(
     "Paperless Billing",
-    ["Yes", "No"]
+    ["Yes","No"]
 )
 
 payment_method = st.sidebar.selectbox(
     "Payment Method",
-    [
-        "Bank Withdrawal",
-        "Credit Card",
-        "Mailed Check"
-    ]
+    ["Bank Withdrawal","Credit Card","Mailed Check"]
 )
 
 monthly_charge = st.sidebar.number_input(
@@ -174,128 +173,148 @@ total_revenue = st.sidebar.number_input(
     min_value=0.0,
     value=1200.0
 )
-# Convert Yes/No values
-yes_no = {"Yes": 1, "No": 0}
+# Encode categorical inputs using saved LabelEncoders
 
-gender = 1 if gender == "Male" else 0
-married = yes_no[married]
-phone_service = yes_no[phone_service]
-multiple_lines = yes_no[multiple_lines]
-internet_service = yes_no[internet_service]
-online_security = yes_no[online_security]
-online_backup = yes_no[online_backup]
-device_protection = yes_no[device_protection]
-premium_support = yes_no[premium_support]
-streaming_tv = yes_no[streaming_tv]
-streaming_movies = yes_no[streaming_movies]
-unlimited_data = yes_no[unlimited_data]
-paperless = yes_no[paperless]
+gender = label_encoders["Gender"].transform([gender])[0]
+married = label_encoders["Married"].transform([married])[0]
+offer = label_encoders["Offer"].transform([offer])[0]
+phone_service = label_encoders["Phone Service"].transform([phone_service])[0]
+multiple_lines = label_encoders["Multiple Lines"].transform([multiple_lines])[0]
+internet_service = label_encoders["Internet Service"].transform([internet_service])[0]
+internet_type = label_encoders["Internet Type"].transform([internet_type])[0]
+online_security = label_encoders["Online Security"].transform([online_security])[0]
+online_backup = label_encoders["Online Backup"].transform([online_backup])[0]
+device_protection = label_encoders["Device Protection Plan"].transform([device_protection])[0]
+premium_support = label_encoders["Premium Tech Support"].transform([premium_support])[0]
+streaming_tv = label_encoders["Streaming TV"].transform([streaming_tv])[0]
+streaming_movies = label_encoders["Streaming Movies"].transform([streaming_movies])[0]
+unlimited_data = label_encoders["Unlimited Data"].transform([unlimited_data])[0]
+contract = label_encoders["Contract"].transform([contract])[0]
+paperless = label_encoders["Paperless Billing"].transform([paperless])[0]
+payment_method = label_encoders["Payment Method"].transform([payment_method])[0]
 
 # Create Input DataFrame
+
 input_data = pd.DataFrame({
-    "Gender":[gender],
-    "Age":[age],
-    "Married":[married],
-    "Number of Dependents":[dependents],
-    "Number of Referrals":[number_referrals],
-    "Tenure in Months":[tenure],
-    "Offer":[offer],
-    "Phone Service":[phone_service],
-    "Avg Monthly Long Distance Charges":[avg_long_distance],
-    "Multiple Lines":[multiple_lines],
-    "Internet Service":[internet_service],
-    "Internet Type":[internet_type],
-    "Online Security":[online_security],
-    "Online Backup":[online_backup],
-    "Device Protection Plan":[device_protection],
-    "Premium Tech Support":[premium_support],
-    "Streaming TV":[streaming_tv],
-    "Streaming Movies":[streaming_movies],
-    "Unlimited Data":[unlimited_data],
-    "Contract":[contract],
-    "Paperless Billing":[paperless],
-    "Payment Method":[payment_method],
-    "Monthly Charge":[monthly_charge],
-    "Total Charges":[total_charges],
-    "Total Refunds":[total_refunds],
-    "Total Extra Data Charges":[total_extra_data],
-    "Total Long Distance Charges":[total_long_distance],
-    "Total Revenue":[total_revenue]
+    "Gender": [gender],
+    "Age": [age],
+    "Married": [married],
+    "Number of Dependents": [dependents],
+    "Number of Referrals": [number_referrals],
+    "Tenure in Months": [tenure],
+    "Offer": [offer],
+    "Phone Service": [phone_service],
+    "Avg Monthly Long Distance Charges": [avg_long_distance],
+    "Multiple Lines": [multiple_lines],
+    "Internet Service": [internet_service],
+    "Internet Type": [internet_type],
+    "Online Security": [online_security],
+    "Online Backup": [online_backup],
+    "Device Protection Plan": [device_protection],
+    "Premium Tech Support": [premium_support],
+    "Streaming TV": [streaming_tv],
+    "Streaming Movies": [streaming_movies],
+    "Unlimited Data": [unlimited_data],
+    "Contract": [contract],
+    "Paperless Billing": [paperless],
+    "Payment Method": [payment_method],
+    "Monthly Charge": [monthly_charge],
+    "Total Charges": [total_charges],
+    "Total Refunds": [total_refunds],
+    "Total Extra Data Charges": [total_extra_data],
+    "Total Long Distance Charges": [total_long_distance],
+    "Total Revenue": [total_revenue]
 })
 
-# Encode categorical columns
-input_data = pd.get_dummies(input_data)
-
 # Prediction
+
 if st.button("Predict Customer Status"):
+
     prediction = model.predict(input_data)
 
-    if prediction[0] == 1:
-        st.error("⚠️ Customer is likely to Churn.")
-    else:
-        st.success("✅ Customer is likely to Stay.")
+    if prediction[0] == 0:
+        st.success("✅ Customer is likely to Stay")
 
-# Graph Section
-st.markdown("---")
- st.header("📊 Data Visualizations")
+    elif prediction[0] == 1:
+        st.error("⚠️ Customer is likely to Churn")
+
+    else:
+        st.info("🆕 Customer is likely to Join") 
+        # ---------------- Data Visualizations ----------------
+
+st.header("📊 Data Visualizations")
 
 st.subheader("Customer Status")
-st.image("Customer_Status.jpeg", width="stretch")
+st.image("graphs/Customer_Status.jpeg", width="stretch")
 
 st.subheader("Contract vs Customer Status")
-st.image("Contract_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Contract_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Monthly Charge Distribution")
-st.image("Monthly_Charge_Distribution.jpeg", width="stretch")
+st.image("graphs/Monthly_Charge_Distribution.jpeg", width="stretch")
 
 st.subheader("Tenure in Months Distribution")
-st.image("Tenure_in_Months_Distribution.jpeg", width="stretch")
+st.image("graphs/Tenure_in_Months_Distribution.jpeg", width="stretch")
 
 st.subheader("Monthly Charge vs Customer Status")
-st.image("Monthly_Charge_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Monthly_Charge_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Internet Type vs Customer Status")
-st.image("Internet_Type_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Internet_Type_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Correlation Heatmap")
-st.image("Correlation_Heatmap.jpeg", width="stretch")
+st.image("graphs/Correlation_Heatmap.jpeg", width="stretch")
 
 st.subheader("Gender vs Customer Status")
-st.image("Gender_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Gender_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Payment Method vs Customer Status")
-st.image("Payment_Method_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Payment_Method_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Online Security vs Customer Status")
-st.image("Online_Security_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Online_Security_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Premium Tech Support vs Customer Status")
-st.image("Premium_Tech_Support_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Premium_Tech_Support_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Total Charges Distribution")
-st.image("Total_Charges_Distribution.jpeg", width="stretch")
+st.image("graphs/Total_Charges_Distribution.jpeg", width="stretch")
 
 st.subheader("Total Charges vs Customer Status")
-st.image("Total_Charges_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Total_Charges_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Customer Status Distribution (Pie Chart)")
-st.image("Customer_Status_Distribution_Pie.jpeg", width="stretch")
+st.image("graphs/Customer_Status_Distribution_Pie.jpeg", width="stretch")
 
 st.subheader("Age Distribution")
-st.image("Age_Distribution.jpeg", width="stretch")
+st.image("graphs/Age_Distribution.jpeg", width="stretch")
 
 st.subheader("Married vs Customer Status")
-st.image("Married_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Married_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Phone Service vs Customer Status")
-st.image("Phone_Service_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Phone_Service_vs_Customer_Status.jpeg", width="stretch")
 
 st.subheader("Streaming TV vs Customer Status")
-st.image("Streaming_TV_vs_Customer_Status.jpeg", width="stretch")
+st.image("graphs/Streaming_TV_vs_Customer_Status.jpeg", width="stretch")
+# ---------------- Footer ----------------
 
-# Footer
-st.markdown("---")O
+st.markdown("---")
+
 st.markdown(
-    "<center><h4>Customer Churn Prediction using Machine Learning</h4></center>",
+    """
+    <div style="text-align:center">
+        <p>📊 Customer Churn Prediction App</p>
+        <p>Built using Machine Learning, Python & Streamlit</p>
+    </div>
+    """,
     unsafe_allow_html=True
 )
+
+
+
+
+
+
+
+
