@@ -304,6 +304,7 @@ st.write("""
 
 **Prediction Output:** Predicts whether a customer is likely to Stay or Churn based on the provided customer information.
 """)
+
         # ---------------- Data Visualizations ----------------
 
 st.header("📊 Data Visualizations")
