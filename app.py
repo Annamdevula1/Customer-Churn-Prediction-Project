@@ -379,7 +379,7 @@ with col1:
 
 with col2:
     
-### 👨‍💻 Durga Prasad Annamdevula
+st.markdown("### 👨‍💻 Durga Prasad Annamdevula")
 
 st.markdown("🎓 Recently Graduate And Fresher")
 
