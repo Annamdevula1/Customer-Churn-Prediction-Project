@@ -36,7 +36,6 @@ st.write("""
 **Target Variable:** Customer Status
 **Programming Language:** Python
 **Machine Learning Model:** Random Forest Classifier
-""")
 
 
 **Libraries Used:**
