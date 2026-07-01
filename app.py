@@ -380,7 +380,7 @@ with col2:
     st.markdown("""
 ### 👨‍💻 Durga Prasad Annamdevula
 
-🎓 Recently Graduate And Fresher
+st.markdown("🎓 Recently Graduate And Fresher")
 
 📧 **Email:** durgaprasadannamdevula41@gmail.com
 
