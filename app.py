@@ -237,7 +237,7 @@ input_data = input_data.reindex(columns=model.feature_names_in_, fill_value=0)
 
 prediction = model.predict(input_data)
 
-    prediction = model.predict(input_data)
+
 
     if prediction[0] == 0:
         st.success("✅ Customer is likely to Stay")
