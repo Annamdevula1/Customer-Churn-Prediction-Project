@@ -29,7 +29,7 @@ st.subheader("📌 Project Information")
 st.write("""
 
 Customer Churn Prediction is a Machine Learning project that predicts whether a telecom customer is likely to stay or churn based on customer information such as demographics, service usage, tenure, and billing details. The project uses a Random Forest Classifier to analyze customer data and generate predictions, helping telecom companies improve customer retention by identifying customers who are at risk of leaving.
-
+""")
 st.write("""
 **Project Name:** Customer Churn Prediction
 
