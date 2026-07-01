@@ -246,10 +246,13 @@ if st.button("Predict Customer Status"):
 st.header("📊 Data Visualizations")
 
 st.subheader("Customer Status")
-st.image('Customer_Status.jpeg')
+from PIL import Image
+
+img = Image.open("Customer_Status.jpeg")
+st.image(img)
 
 st.subheader("Contract vs Customer Status")
-st.image('Contract_vs_Customer_Status.jpeg')
+st.image('Contract_vs_Customer_Status.jpeg'
 
 st.subheader("Monthly Charge Distribution")
 st.image('Monthly_Charge_Distribution.jpeg')
