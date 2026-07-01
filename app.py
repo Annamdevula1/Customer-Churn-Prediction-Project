@@ -37,7 +37,9 @@ st.write("""
 
 **Dataset:** Telecom Customer Churn Dataset
 
+st.markdown("""
 **Total Records:** 7,043
+""")
 
 **Features:** 38
 
