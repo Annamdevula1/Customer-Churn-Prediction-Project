@@ -111,6 +111,7 @@ print("Part 1 Completed Successfully!")
 
 # Define Features (X) and Target (y)
 X = df.drop("Customer Status", axis=1)
+print(X.columns.tolist())
 y = df["Customer Status"]
 
 # Split the Dataset
