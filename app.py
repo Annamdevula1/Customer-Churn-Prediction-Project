@@ -379,19 +379,19 @@ with col1:
 
 with col2:
     
-st.markdown("### 👨‍💻 Durga Prasad Annamdevula")
+  st.markdown("### 👨‍💻 Durga Prasad Annamdevula")
 
-st.markdown("🎓 Recently Graduate And Fresher")
+  st.markdown("🎓 Recently Graduate And Fresher")
 
-st.markdown("📧 **Email:** durgaprasadannamdevula41@gmail.com")
+  st.markdown("📧 **Email:** durgaprasadannamdevula41@gmail.com")
 
-st.markdown("💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git")
+  st.markdown("💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git")
 
-st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341")
+  st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341")
 
-st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
+  st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
 
-st.markdown("© 2026 Durga Prasad Annamdevula. All Rights Reserved.")
+  st.markdown("© 2026 Durga Prasad Annamdevula. All Rights Reserved.")
 
 
 
