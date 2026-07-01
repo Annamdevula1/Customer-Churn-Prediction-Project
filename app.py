@@ -239,13 +239,14 @@ prediction = model.predict(input_data)
 
 
 
-    if prediction[0] == 0:
+   
+ if prediction[0] == 0:
         st.success("✅ Customer is likely to Stay")
 
-    elif prediction[0] == 1:
+ elif prediction[0] == 1:
         st.error("⚠️ Customer is likely to Churn")
 
-    else:
+ else:
         st.info("🆕 Customer is likely to Join") 
         # ---------------- Data Visualizations ----------------
 
