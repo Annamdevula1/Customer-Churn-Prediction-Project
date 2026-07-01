@@ -45,7 +45,7 @@ st.write("""
 - Scikit-learn
 - Matplotlib
 - Streamlit
-""")
+
 **Development Environment:** Google Colab
 
 **Version Control:** GitHub
