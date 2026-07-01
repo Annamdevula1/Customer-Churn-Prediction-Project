@@ -270,7 +270,7 @@ st.subheader("Gender vs Customer Status")
 st.image("Gender_vs_Customer_Status.jpeg")
 
 st.subheader("Payment Method vs Customer Status")
-st.image("Payment_Method_vs_Customer_Status.jpeg)
+st.image("Payment_Method_vs_Customer_Status.jpeg")
 
 st.subheader("Online Security vs Customer Status")
 st.image("Online_Security_vs_Customer_Status.jpeg")
