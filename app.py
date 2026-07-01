@@ -266,8 +266,8 @@ input_data = pd.DataFrame({
 # Prediction
 
 if st.button("Predict Customer Status"):
-    st.write("Model expects:", model.feature_names_in_.tolist())
-    st.write("Input columns:", input_data.columns.tolist())
+   st.write("Model expects:", model.feature_names_in_.tolist())
+   st.write("Input columns:", input_data.columns.tolist())
 
 input_data = input_data.reindex(columns=model.feature_names_in_, fill_value=0)
 
