@@ -375,7 +375,7 @@ st.subheader("👨‍💻 Developer")
 col1, col2 = st.columns([1, 3])
 
 with col1:
-    st.image("my_photo.jpg", width=150)  
+    st.image("prasad.jpeg", width=150)  
 
 with col2:
     st.markdown("""
