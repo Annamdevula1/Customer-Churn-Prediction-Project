@@ -15,6 +15,43 @@ st.image("project image.jpeg", width="stretch")
 
 st.title("📊 Customer Churn Prediction System")
 st.markdown("Predict whether a customer is likely to stay or churn.")
+# ==========================
+# Project Information
+# ==========================
+
+st.markdown("---")
+st.subheader("📌 Project Information")
+
+st.write("""
+**Project Name:** Customer Churn Prediction
+
+**Objective:** Predict whether a telecom customer is likely to churn or stay using Machine Learning.
+
+**Dataset:** Telecom Customer Churn Dataset
+
+**Total Records:** 7,043
+
+**Features:** 38
+
+**Target Variable:** Customer Status
+
+**Programming Language:** Python
+
+**Machine Learning Model:** Random Forest Classifier
+
+**Libraries Used:**
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Streamlit
+
+**Development Environment:** Google Colab
+
+**Version Control:** GitHub
+
+**Purpose:** Help telecom companies identify customers who are likely to churn and support customer retention strategies.
+""")
 
 st.sidebar.title("Customer Details")
 
@@ -247,7 +284,27 @@ elif prediction[0] == 1:
         st.error("⚠️ Customer is likely to Churn")
 
 else:
-        st.info("🆕 Customer is likely to Join") 
+    st.info("🆕 Customer is likely to Join") 
+    st.markdown("---")
+st.subheader("🤖 Model Information")
+
+st.write("""
+**Algorithm:** Random Forest Classifier
+
+**Machine Learning Type:** Supervised Learning (Classification)
+
+**Training Data:** 80%
+
+**Testing Data:** 20%
+
+**Target Variable:** Customer Status
+
+**Evaluation Metrics:** Accuracy, Precision, Recall, and F1-Score
+
+**Model Accuracy:** 100% (on the test dataset)
+
+**Prediction Output:** Predicts whether a customer is likely to Stay or Churn based on the provided customer information.
+""")
         # ---------------- Data Visualizations ----------------
 
 st.header("📊 Data Visualizations")
@@ -312,15 +369,30 @@ st.image('Streaming_TV_vs_Customer_Status.jpeg')
 
 st.markdown("---")
 
-st.markdown(
-    """
-    <div style="text-align:center">
-        <p>📊 Customer Churn Prediction App</p>
-        <p>Built using Machine Learning, Python & Streamlit</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("---")
+st.subheader("👨‍💻 Developer")
+
+col1, col2 = st.columns([1, 3])
+
+with col1:
+    st.image("my_photo.jpg", width=150)  
+
+with col2:
+    st.markdown("""
+### 👨‍💻 Durga Prasad Annamdevula
+
+🎓 Recently Graduate And Fresher
+
+📧 **Email:** durgaprasadannamdevula41@gmail.com
+
+💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git
+
+🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341
+
+🌐 **Project:** Customer Churn Prediction using Machine Learning
+
+© 2026 Durga Prasad Annamdevula. All Rights Reserved.
+""")
 
 
 
