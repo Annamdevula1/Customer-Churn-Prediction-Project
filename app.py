@@ -382,13 +382,13 @@ with col2:
 
 st.markdown("🎓 Recently Graduate And Fresher")
 
-📧 **Email:** durgaprasadannamdevula41@gmail.com
+st.markdown("📧 **Email:** durgaprasadannamdevula41@gmail.com")
 
-💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git
+st.markdown("💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git")
 
-🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341
+st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341")
 
-🌐 **Project:** Customer Churn Prediction using Machine Learning
+st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
 
 © 2026 Durga Prasad Annamdevula. All Rights Reserved.
 """)
