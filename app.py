@@ -390,7 +390,7 @@ st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamde
 
 st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
 
-© 2026 Durga Prasad Annamdevula. All Rights Reserved.
+st.markdown("© 2026 Durga Prasad Annamdevula. All Rights Reserved.")
 """)
 
 
