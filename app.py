@@ -16,6 +16,7 @@ st.image("project image.jpeg", width="stretch")
 st.title("📊 Customer Churn Prediction System")
 
 st.markdown("Predict whether a customer is likely to stay or churn.")
+st.sidebar.title("Customer Details")
 
 # ==========================
 # Project Information
