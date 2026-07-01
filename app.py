@@ -252,7 +252,7 @@ img = Image.open("Customer_Status.jpeg")
 st.image(img)
 
 st.subheader("Contract vs Customer Status")
-st.image('Contract_vs_Customer_Status.jpeg'
+st.image('Contract_vs_Customer_Status.jpeg')
 
 st.subheader("Monthly Charge Distribution")
 st.image('Monthly_Charge_Distribution.jpeg')
