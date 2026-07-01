@@ -377,7 +377,7 @@ with col1:
     st.image("prasad.jpeg", width=150)  
 
 with col2:
-    st.markdown("""
+    
 ### 👨‍💻 Durga Prasad Annamdevula
 
 st.markdown("🎓 Recently Graduate And Fresher")
@@ -391,7 +391,7 @@ st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamde
 st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
 
 st.markdown("© 2026 Durga Prasad Annamdevula. All Rights Reserved.")
-""")
+
 
 
 
