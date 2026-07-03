@@ -52,7 +52,7 @@ st.write("""
 **Purpose:** Help telecom companies identify customers who are likely to churn and support customer retention strategies.
 """)
 
-st.sidebar.title("Customer Details")
+
 
 # Customer Information
 
