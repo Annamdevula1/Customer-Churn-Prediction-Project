@@ -29,12 +29,19 @@ st.subheader("📌 Project Information")
 
 st.write("""
 **Project Name:** Customer Churn Prediction
+
 **Objective:** Predict whether a telecom customer will churn or stay.
+
 **Dataset:** Telecom Customer Churn Dataset
+
 **Total Records:** 7,043
+
 **Features:** 38
+
 **Target Variable:** Customer Status
+
 **Programming Language:** Python
+
 **Machine Learning Model:** Random Forest Classifier
 
 
