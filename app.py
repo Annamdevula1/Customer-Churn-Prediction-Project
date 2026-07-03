@@ -390,7 +390,7 @@ with col2:
 
   st.markdown("🎓 Recently Graduate And Fresher")
 
-  st.markdown("📧 **Email:**durgaprasadannamdevula41@gmail.com")
+  st.markdown("📧 ** Email:** durgaprasadannamdevula41@gmail.com")
 
   st.markdown("💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git")
 
