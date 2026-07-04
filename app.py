@@ -273,21 +273,21 @@ input_data = pd.DataFrame({
 # Prediction
 
 if st.button("Predict Customer Status"):
+   st.write("Model expects:", model.feature_names_in_.tolist())
+   st.write("Input columns:", input_data.columns.tolist())
 
-    input_data = input_data.reindex(columns=model.feature_names_in_, fill_value=0)
+input_data = input_data.reindex(columns=model.feature_names_in_, fill_value=0)
 
-    prediction = model.predict(input_data)
+prediction = model.predict(input_data)
 
-    status = label_encoders["Customer Status"].inverse_transform(prediction)[0]
+if prediction[0] == 0:
+    st.success("✅ Customer is likely to Stay")
 
-    if status == "Stayed":
-        st.success("✅ Customer is likely to Stay")
+elif prediction[0] == 1:
+    st.error("⚠️ Customer is likely to Churn")
 
-    elif status == "Churned":
-        st.error("⚠️ Customer is likely to Churn")
-
-    elif status == "Joined":
-        st.info("🆕 Customer is likely to Join")
+else:
+    st.info("🆕 Customer is likely to Join")
         
 st.subheader("🤖 Model Information")
 
