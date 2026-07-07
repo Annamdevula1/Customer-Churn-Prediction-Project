@@ -157,6 +157,8 @@ The trained Machine Learning model predicts customer status based on the provide
 
 Final Year Student
 
+Recent Graduate 
+
 Machine Learning Project
 
 Data Science Project
