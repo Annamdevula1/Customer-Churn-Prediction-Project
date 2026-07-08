@@ -2,66 +2,59 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load Model and Label Encoders
+# ==========================
+# Load Model
+# ==========================
 model = joblib.load("customer_churn_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
 
+# ==========================
+# Page Configuration
+# ==========================
 st.set_page_config(
     page_title="Customer Churn Prediction",
     page_icon="📊",
     layout="wide"
 )
-st.image("project image.jpeg", width="stretch")
+
+# ==========================
+# Header
+# ==========================
+
+st.image("project image.jpeg", use_container_width=True)
 
 st.title("📊 Customer Churn Prediction System")
 
-st.markdown("Predict whether a customer is likely to stay or churn.")
-st.sidebar.title("Customer Details")
-
-# ==========================
-# Project Information
-# ==========================
-
-st.markdown("---")
-
-st.subheader("📌 Project Information")
-
-
-st.write("""
-**Project Name:** Customer Churn Prediction
-
-**Objective:** Predict whether a telecom customer will churn or stay.
-
-**Dataset:** Telecom Customer Churn Dataset
-
-**Total Records:** 7,043
-
-**Features:** 38
-
-**Target Variable:** Customer Status
-
-**Programming Language:** Python
-
-**Machine Learning Model:** Random Forest Classifier
-
-
-**Libraries Used:**
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Streamlit
-
-**Development Environment:** Google Colab
-
-**Version Control:** GitHub
-
-**Purpose:** Help telecom companies identify customers who are likely to churn and support customer retention strategies.
+st.markdown("""
+Predict whether a telecom customer is likely to **Stay** or **Churn**
+using a Random Forest Machine Learning model.
 """)
 
+# KPI Cards
 
+col1, col2, col3, col4 = st.columns(4)
 
-# Customer Information
+with col1:
+    st.metric("📂 Dataset", "7043")
+
+with col2:
+    st.metric("📈 Features", "38")
+
+with col3:
+    st.metric("🤖 Model", "Random Forest")
+
+with col4:
+    st.metric("🎯 Accuracy", "100%")
+
+st.divider()
+
+# ==========================
+# Sidebar
+# ==========================
+
+st.sidebar.title("📋 Customer Details")
+
+st.sidebar.subheader("👤 Personal Information")
 
 gender = st.sidebar.selectbox(
     "Gender",
@@ -105,6 +98,8 @@ offer = st.sidebar.selectbox(
     "Offer",
     ["None","Offer A","Offer B","Offer C","Offer D","Offer E"]
 )
+
+st.sidebar.subheader("📞 Services")
 
 phone_service = st.sidebar.selectbox(
     "Phone Service",
@@ -167,6 +162,8 @@ unlimited_data = st.sidebar.selectbox(
     ["Yes","No"]
 )
 
+st.sidebar.subheader("💳 Billing")
+
 contract = st.sidebar.selectbox(
     "Contract",
     ["Month-to-Month","One Year","Two Year"]
@@ -217,7 +214,33 @@ total_revenue = st.sidebar.number_input(
     min_value=0.0,
     value=1200.0
 )
-# Encode categorical inputs using saved LabelEncoders
+
+# ==========================
+# Project Information
+# ==========================
+
+with st.expander("📌 Project Information", expanded=False):
+
+    st.write("""
+    **Project Name:** Customer Churn Prediction
+
+    **Objective:** Predict whether a telecom customer will churn or stay.
+
+    **Dataset:** Telecom Customer Churn Dataset
+
+    **Total Records:** 7,043
+
+    **Features:** 38
+
+    **Algorithm:** Random Forest Classifier
+
+    **Machine Learning:** Supervised Learning
+
+    **Purpose:** Help telecom companies reduce customer churn.
+    """)
+    # ==========================
+# Encode categorical inputs
+# ==========================
 
 gender = label_encoders["Gender"].transform([gender])[0]
 married = label_encoders["Married"].transform([married])[0]
@@ -237,167 +260,155 @@ contract = label_encoders["Contract"].transform([contract])[0]
 paperless = label_encoders["Paperless Billing"].transform([paperless])[0]
 payment_method = label_encoders["Payment Method"].transform([payment_method])[0]
 
-# Create Input DataFrame
+# ==========================
+# Create Input Data
+# ==========================
 
 input_data = pd.DataFrame({
-    "Gender": [gender],
-    "Age": [age],
-    "Married": [married],
-    "Number of Dependents": [dependents],
-    "Number of Referrals": [number_referrals],
-    "Tenure in Months": [tenure],
-    "Offer": [offer],
-    "Phone Service": [phone_service],
-    "Avg Monthly Long Distance Charges": [avg_long_distance],
-    "Multiple Lines": [multiple_lines],
-    "Internet Service": [internet_service],
-    "Internet Type": [internet_type],
-    "Online Security": [online_security],
-    "Online Backup": [online_backup],
-    "Device Protection Plan": [device_protection],
-    "Premium Tech Support": [premium_support],
-    "Streaming TV": [streaming_tv],
-    "Streaming Movies": [streaming_movies],
-    "Unlimited Data": [unlimited_data],
-    "Contract": [contract],
-    "Paperless Billing": [paperless],
-    "Payment Method": [payment_method],
-    "Monthly Charge": [monthly_charge],
-    "Total Charges": [total_charges],
-    "Total Refunds": [total_refunds],
-    "Total Extra Data Charges": [total_extra_data],
-    "Total Long Distance Charges": [total_long_distance],
-    "Total Revenue": [total_revenue]
+    "Gender":[gender],
+    "Age":[age],
+    "Married":[married],
+    "Number of Dependents":[dependents],
+    "Number of Referrals":[number_referrals],
+    "Tenure in Months":[tenure],
+    "Offer":[offer],
+    "Phone Service":[phone_service],
+    "Avg Monthly Long Distance Charges":[avg_long_distance],
+    "Multiple Lines":[multiple_lines],
+    "Internet Service":[internet_service],
+    "Internet Type":[internet_type],
+    "Online Security":[online_security],
+    "Online Backup":[online_backup],
+    "Device Protection Plan":[device_protection],
+    "Premium Tech Support":[premium_support],
+    "Streaming TV":[streaming_tv],
+    "Streaming Movies":[streaming_movies],
+    "Unlimited Data":[unlimited_data],
+    "Contract":[contract],
+    "Paperless Billing":[paperless],
+    "Payment Method":[payment_method],
+    "Monthly Charge":[monthly_charge],
+    "Total Charges":[total_charges],
+    "Total Refunds":[total_refunds],
+    "Total Extra Data Charges":[total_extra_data],
+    "Total Long Distance Charges":[total_long_distance],
+    "Total Revenue":[total_revenue]
 })
 
+# ==========================
 # Prediction
+# ==========================
 
-if st.button("Predict Customer Status"):
-   st.write("Model expects:", model.feature_names_in_.tolist())
-   st.write("Input columns:", input_data.columns.tolist())
+st.divider()
+st.subheader("🤖 Prediction")
 
-input_data = input_data.reindex(columns=model.feature_names_in_, fill_value=0)
+if st.button("🔍 Predict Customer Status", use_container_width=True):
 
-prediction = model.predict(input_data)
+    input_data = input_data.reindex(
+        columns=model.feature_names_in_,
+        fill_value=0
+    )
 
-if prediction[0] == 0:
-    st.success("✅ Customer is likely to Stay")
+    prediction = model.predict(input_data)
 
-elif prediction[0] == 1:
-    st.error("⚠️ Customer is likely to Churn")
+    if prediction[0] == 0:
+        st.success("✅ Customer is likely to Stay")
 
-else:
-    st.info("🆕 Customer is likely to Join")
-        
-st.subheader("🤖 Model Information")
+    elif prediction[0] == 1:
+        st.error("⚠️ Customer is likely to Churn")
 
-st.write("""
-**Algorithm:** Random Forest Classifier
+    else:
+        st.info("🆕 Customer is likely to Join")
 
-**Machine Learning Type:** Supervised Learning (Classification)
+    if hasattr(model, "predict_proba"):
+        probability = model.predict_proba(input_data)[0]
 
-**Training Data:** 80%
+        st.subheader("Prediction Confidence")
 
-**Testing Data:** 20%
+        if len(probability) >= 2:
+            col1, col2 = st.columns(2)
+            col1.metric("Stay Probability", f"{probability[0]*100:.2f}%")
+            col2.metric("Churn Probability", f"{probability[1]*100:.2f}%")
 
-**Target Variable:** Customer Status
+# ==========================
+# Model Information
+# ==========================
 
-**Evaluation Metrics:** Accuracy, Precision, Recall, and F1-Score
+st.divider()
 
-**Model Accuracy:** 100% (on the test dataset)
+with st.expander("📈 Model Information"):
 
-**Prediction Output:** Predicts whether a customer is likely to Stay or Churn based on the provided customer information.
+    st.write("""
+- Algorithm: Random Forest Classifier
+- Machine Learning Type: Supervised Classification
+- Training Data: 80%
+- Testing Data: 20%
+- Evaluation Metrics:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
+- Accuracy: 100%
 """)
 
-        # ---------------- Data Visualizations ----------------
+# ==========================
+# Data Visualizations
+# ==========================
 
+st.divider()
 st.header("📊 Data Visualizations")
 
-st.subheader("Customer Status")
-from PIL import Image
+images = [
+    "Customer_Status.jpeg",
+    "Contract_vs_Customer_Status.jpeg",
+    "Monthly_Charge_Distribution.jpeg",
+    "Tenure_in_Months_Distribution.jpeg",
+    "Monthly_Charge_vs_Customer_Status.jpeg",
+    "Internet_Type_vs_Customer_Status.jpeg",
+    "Correlation_Heatmap.jpeg",
+    "Gender_vs_Customer_Status.jpeg",
+    "Payment_Method_vs_Customer_Status.jpeg",
+    "Online_Security_vs_Customer_Status.jpeg",
+    "Premium_Tech_Support_vs_Customer_Status.jpeg",
+    "Total_Charges_Distribution.jpeg",
+    "Total_Charges_vs_Customer_Status.jpeg",
+    "Customer_Status_Distribution_Pie.jpeg",
+    "Age_Distribution.jpeg",
+    "Married_vs_Customer_Status.jpeg",
+    "Phone_Service_vs_Customer_Status.jpeg",
+    "Streaming_TV_vs_Customer_Status.jpeg"
+]
 
-img = Image.open("Customer_Status.jpeg")
-st.image(img)
+for i in range(0, len(images), 2):
+    col1, col2 = st.columns(2)
 
-st.subheader("Contract vs Customer Status")
-st.image('Contract_vs_Customer_Status.jpeg')
+    with col1:
+        st.image(images[i], use_container_width=True)
 
-st.subheader("Monthly Charge Distribution")
-st.image('Monthly_Charge_Distribution.jpeg')
+    if i + 1 < len(images):
+        with col2:
+            st.image(images[i+1], use_container_width=True)
 
-st.subheader("Tenure in Months Distribution")
-st.image('Tenure_in_Months_Distribution.jpeg')
+# ==========================
+# Developer
+# ==========================
 
-st.subheader("Monthly Charge vs Customer Status")
-st.image('Monthly_Charge_vs_Customer_Status.jpeg')
+st.divider()
+st.header("👨‍💻 Developer")
 
-st.subheader("Internet Type vs Customer Status")
-st.image('Internet_Type_vs_Customer_Status.jpeg')
-
-st.subheader("Correlation Heatmap")
-st.image('Correlation_Heatmap.jpeg')
-
-st.subheader("Gender vs Customer Status")
-st.image('Gender_vs_Customer_Status.jpeg')
-
-st.subheader("Payment Method vs Customer Status")
-st.image('Payment_Method_vs_Customer_Status.jpeg')
-
-st.subheader("Online Security vs Customer Status")
-st.image('Online_Security_vs_Customer_Status.jpeg')
-
-st.subheader("Premium Tech Support vs Customer Status")
-st.image('Premium_Tech_Support_vs_Customer_Status.jpeg')
-
-st.subheader("Total Charges Distribution")
-st.image('Total_Charges_Distribution.jpeg')
-
-st.subheader("Total Charges vs Customer Status")
-st.image('Total_Charges_vs_Customer_Status.jpeg')
-
-st.subheader("Customer Status Distribution (Pie Chart)")
-st.image('Customer_Status_Distribution_Pie.jpeg')
-
-st.subheader("Age Distribution")
-st.image('Age_Distribution.jpeg')
-
-st.subheader("Married vs Customer Status")
-st.image('Married_vs_Customer_Status.jpeg')
-
-st.subheader("Phone Service vs Customer Status")
-st.image('Phone_Service_vs_Customer_Status.jpeg')
-
-st.subheader("Streaming TV vs Customer Status")
-st.image('Streaming_TV_vs_Customer_Status.jpeg')
-# ---------------- Footer ----------------
-
-st.markdown("---")
-
-st.markdown("---")
-st.subheader("👨‍💻 Developer")
-
-col1, col2 = st.columns([1, 3])
+col1, col2 = st.columns([1,3])
 
 with col1:
-    st.image("prasad.jpeg", width=150)  
+    st.image("prasad.jpeg", width=180)
 
 with col2:
-    
-  st.markdown("### 👨‍💻 Durga Prasad Annamdevula")
+    st.markdown("### Durga Prasad Annamdevula")
+    st.write("🎓 BCA Graduate")
+    st.write("💻 Machine Learning & Python")
+    st.write("📧 durgaprasadannamdevula41@gmail.com")
+    st.write("🌐 Customer Churn Prediction Project")
+    st.write("🔗 GitHub: https://github.com/Annamdevula1/Customer-Churn-Prediction-Project")
+    st.write("🔗 LinkedIn: https://www.linkedin.com/in/durga-prasad-annamdevula-232538341")
 
-  st.markdown("🎓 Recently Graduate And Fresher")
-
-  st.markdown("📧  Email: durgaprasadannamdevula41@gmail.com")
-
-  st.markdown("💻 **GitHub:** https://github.com/Annamdevula1/Customer-Churn-Prediction-Project.git")
-
-  st.markdown("🔗 **LinkedIn:** https://www.linkedin.com/in/durga-prasad-annamdevula-232538341")
-
-  st.markdown("🌐 **Project:** Customer Churn Prediction using Machine Learning")
-
-  st.markdown("© 2026 Durga Prasad Annamdevula. All Rights Reserved.")
-
-
-
-
-
+st.divider()
+st.caption("© 2026 Durga Prasad Annamdevula | Customer Churn Prediction")
