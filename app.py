@@ -37,18 +37,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📊 Visualizations",
     "👨‍💻 Developer"
 ])
-with tab1:
-    # Project Information
-    # KPI cards
 
-with tab2:
-    # Prediction code
-
-with tab3:
-    # All visualization images
-
-with tab4:
-    # Developer information
 
 # KPI Cards
 
