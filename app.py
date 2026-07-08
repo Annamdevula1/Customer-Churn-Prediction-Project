@@ -374,7 +374,7 @@ images = [
     "Monthly_Charge_vs_Customer_Status.jpeg"
     "Internet_Type_vs_Customer_Status.jpeg"
     "Correlation_Heatmap.jpeg"
-    Gender_vs_Customer_Status.jpeg"
+    "Gender_vs_Customer_Status.jpeg"
     "Payment_Method_vs_Customer_Status.jpeg"
     "Online_Security_vs_Customer_Status.jpeg"
     "Premium_Tech_Support_vs_Customer_Status.jpeg"
