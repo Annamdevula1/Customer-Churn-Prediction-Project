@@ -238,7 +238,7 @@ with st.expander("📌 Project Information", expanded=False):
 
     **Purpose:** Help telecom companies reduce customer churn.
     """)
-    # ==========================
+# ==========================
 # Encode categorical inputs
 # ==========================
 
@@ -359,24 +359,24 @@ st.divider()
 st.header("📊 Data Visualizations")
 
 images = [
-    "Customer_Status.jpeg",
-    "Contract_vs_Customer_Status.jpeg",
-    "Monthly_Charge_Distribution.jpeg",
-    "Tenure_in_Months_Distribution.jpeg",
-    "Monthly_Charge_vs_Customer_Status.jpeg",
-    "Internet_Type_vs_Customer_Status.jpeg",
-    "Correlation_Heatmap.jpeg",
-    "Gender_vs_Customer_Status.jpeg",
-    "Payment_Method_vs_Customer_Status.jpeg",
-    "Online_Security_vs_Customer_Status.jpeg",
-    "Premium_Tech_Support_vs_Customer_Status.jpeg",
-    "Total_Charges_Distribution.jpeg",
-    "Total_Charges_vs_Customer_Status.jpeg",
-    "Customer_Status_Distribution_Pie.jpeg",
-    "Age_Distribution.jpeg",
-    "Married_vs_Customer_Status.jpeg",
-    "Phone_Service_vs_Customer_Status.jpeg",
-    "Streaming_TV_vs_Customer_Status.jpeg"
+    st.image("Customer_Status.jpeg", width="stretch")
+    st.image("Contract_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Monthly_Charge_Distribution.jpeg", width="stretch")
+    st.image("Tenure_in_Months_Distribution.jpeg", width="stretch")
+    st.image("Monthly_Charge_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Internet_Type_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Correlation_Heatmap.jpeg", width="stretch")
+    st.image("Gender_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Payment_Method_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Online_Security_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Premium_Tech_Support_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Total_Charges_Distribution.jpeg", width="stretch")
+    st.image("Total_Charges_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Customer_Status_Distribution_Pie.jpeg", width="stretch")
+    st.image("Age_Distribution.jpeg", width="stretch")
+    st.image("Married_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Phone_Service_vs_Customer_Status.jpeg", width="stretch")
+    st.image("Streaming_TV_vs_Customer_Status.jpeg", width="stretch")
 ]
 
 for i in range(0, len(images), 2):
