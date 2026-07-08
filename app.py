@@ -31,12 +31,6 @@ using a Random Forest Machine Learning model.
 """)
 
 
-tab1, tab2, tab3, tab4 = st.tabs([
-    "🏠 Home",
-    "🤖 Prediction",
-    "📊 Visualizations",
-    "👨‍💻 Developer"
-])
 
 
 # KPI Cards
