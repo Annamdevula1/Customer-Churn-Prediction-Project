@@ -30,6 +30,14 @@ Predict whether a telecom customer is likely to **Stay** or **Churn**
 using a Random Forest Machine Learning model.
 """)
 
+
+tab1, tab2, tab3, tab4 = st.tabs([
+    "🏠 Home",
+    "🤖 Prediction",
+    "📊 Visualizations",
+    "👨‍💻 Developer"
+])
+
 # KPI Cards
 
 col1, col2, col3, col4 = st.columns(4)
