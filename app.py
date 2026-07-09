@@ -492,32 +492,39 @@ if submitted:
     )
 
     if prediction[0] == 0:
-        st.success("✅ Customer is likely to Stay")
+    st.success("✅ Customer is likely to Stay")
+    risk = "🟢 Low Risk"
+    recommendation = "Customer is likely to remain. Continue providing good service."
 
-    elif prediction[0] == 1:
-        st.error("⚠️ Customer is likely to Churn")
+elif prediction[0] == 1:
+    st.error("⚠️ Customer is likely to Churn")
+    risk = "🔴 High Risk"
+    recommendation = "Offer discounts, loyalty rewards, or personalized support to retain the customer."
 
-    else:
-        st.info("🆕 Customer is likely to Join")
+else:
+    st.info("🆕 Customer is likely to Join")
+    risk = "🟡 New Customer"
+    recommendation = "Provide a smooth onboarding experience."
 
-    if hasattr(model, "predict_proba"):
+st.subheader("📋 Prediction Summary")
 
-        probability = model.predict_proba(input_data)[0]
+status = "Stay" if prediction[0] == 0 else "Churn"
 
-        st.subheader("Prediction Confidence")
+st.write(f"**Customer Status:** {status}")
+st.write(f"**Risk Level:** {risk}")
+st.write(f"**Recommendation:** {recommendation}")
 
-        col1, col2 = st.columns(2)
+if hasattr(model, "predict_proba"):
 
-        with col1:
-            st.metric(
-                "Stay Probability",
-                f"{probability[0]*100:.2f}%"
-            )
+    probability = model.predict_proba(input_data)[0]
 
-        with col2:
-            st.metric(
-                "Churn Probability",
-                f"{probability[1]*100:.2f}%"
+    st.subheader("📊 Prediction Confidence")
+
+    st.write(f"🟢 Stay Probability: {probability[0]*100:.2f}%")
+    st.progress(float(probability[0]))
+
+    st.write(f"🔴 Churn Probability: {probability[1]*100:.2f}%")
+    st.progress(float(probability[1]))
             )
 # ==========================================
 # Model Information
