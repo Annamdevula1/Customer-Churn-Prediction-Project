@@ -30,9 +30,6 @@ Predict whether a telecom customer is likely to **Stay** or **Churn**
 using a Random Forest Machine Learning model.
 """)
 
-
-
-
 # KPI Cards
 
 col1, col2, col3, col4 = st.columns(4)
@@ -241,7 +238,7 @@ with st.expander("📌 Project Information", expanded=False):
 
     **Purpose:** Help telecom companies reduce customer churn.
     """)
-# ==========================
+    # ==========================
 # Encode categorical inputs
 # ==========================
 
@@ -305,7 +302,7 @@ input_data = pd.DataFrame({
 st.divider()
 st.subheader("🤖 Prediction")
 
-if st.button("🔍 Predict Customer Status", use_container_width="stretch"):
+if st.button("🔍 Predict Customer Status", use_container_width=True):
 
     input_data = input_data.reindex(
         columns=model.feature_names_in_,
@@ -386,11 +383,11 @@ for i in range(0, len(images), 2):
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(images[i], use_container_width="stretch")
+        st.image(images[i], use_container_width=True)
 
     if i + 1 < len(images):
         with col2:
-            st.image(images[i+1], use_container_width="stretch")
+            st.image(images[i+1], use_container_width=True)
 
 # ==========================
 # Developer
