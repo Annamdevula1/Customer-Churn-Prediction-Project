@@ -78,12 +78,6 @@ st.markdown("""
     font-weight:bold;
 }
 
-/* Sidebar */
-section[data-testid="stSidebar"]{
-    background-color: var(--secondary-background-color);
-    color: var(--text-color);
-}
-
 </style>
 """, unsafe_allow_html=True)
 
