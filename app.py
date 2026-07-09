@@ -415,7 +415,7 @@ with st.expander("📌 Project Information", expanded=False):
 
 **Purpose:** Help telecom companies identify customers who are likely to churn and improve customer retention.
 """)
-    # ==========================================
+# ==========================================
 # Encode Categorical Inputs
 # ==========================================
 
@@ -519,7 +519,7 @@ if submitted:
                 "Churn Probability",
                 f"{probability[1]*100:.2f}%"
             )
-            # ==========================================
+# ==========================================
 # Model Information
 # ==========================================
 
