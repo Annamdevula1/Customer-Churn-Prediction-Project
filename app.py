@@ -492,16 +492,16 @@ if submitted:
     )
 
     if prediction[0] == 0:
-    st.success("✅ Customer is likely to Stay")
-    risk = "🟢 Low Risk"
-    recommendation = "Customer is likely to remain. Continue providing good service."
+       st.success("✅ Customer is likely to Stay")
+       risk = "🟢 Low Risk"
+       recommendation = "Customer is likely to remain. Continue providing good service."
 
-elif prediction[0] == 1:
+   elif prediction[0] == 1:
     st.error("⚠️ Customer is likely to Churn")
     risk = "🔴 High Risk"
     recommendation = "Offer discounts, loyalty rewards, or personalized support to retain the customer."
 
-else:
+  else:
     st.info("🆕 Customer is likely to Join")
     risk = "🟡 New Customer"
     recommendation = "Provide a smooth onboarding experience."
