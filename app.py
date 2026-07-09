@@ -525,7 +525,7 @@ if hasattr(model, "predict_proba"):
 
     st.write(f"🔴 Churn Probability: {probability[1]*100:.2f}%")
     st.progress(float(probability[1]))
-            )
+            
 # ==========================================
 # Model Information
 # ==========================================
