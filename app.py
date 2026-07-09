@@ -111,7 +111,7 @@ section[data-testid="stSidebar"] h3{
 # Header
 # ==========================================
 
-st.image("project image.jpeg", use_container_width=True)
+st.image("project image.jpeg", width="stretch")
 
 st.markdown("""
 <div class="header-box">
@@ -586,12 +586,12 @@ for i in range(0, len(images), 2):
     col1, col2 = st.columns(2)
 
     with col1:
-        st.image(images[i], use_container_width=True)
+        st.image(images[i], width="stetch")
 
     if i + 1 < len(images):
 
         with col2:
-            st.image(images[i + 1], use_container_width=True)
+            st.image(images[i + 1], width="stretch")
 
 # ==========================================
 # Developer Section
