@@ -316,7 +316,7 @@ with st.form("customer_form"):
             "Unlimited Data",
             ["Yes", "No"]
         )
-            st.divider()
+    st.divider()
 
     st.subheader("💳 Billing Information")
 
