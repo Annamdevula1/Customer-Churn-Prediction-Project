@@ -26,7 +26,8 @@ st.markdown("""
 
 /* Main Background */
 .stApp{
-    background-color:#F5F7FA;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Hero Title */
@@ -35,14 +36,12 @@ st.markdown("""
     font-weight:bold;
     color:white;
     text-align:center;
-    padding-top:10px;
 }
 
 .hero-subtitle{
     font-size:20px;
     color:white;
     text-align:center;
-    padding-bottom:15px;
 }
 
 /* Header Box */
@@ -55,20 +54,18 @@ st.markdown("""
 
 /* Section Heading */
 .section-title{
-    color:#1565C0;
+    color: var(--text-color);
     font-size:28px;
     font-weight:bold;
-    margin-top:10px;
-    margin-bottom:15px;
 }
 
 /* Metric Cards */
 [data-testid="metric-container"]{
-    background:white;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
     border-radius:15px;
     padding:15px;
-    border:1px solid #E0E0E0;
-    box-shadow:0px 2px 10px rgba(0,0,0,0.08);
+    border:1px solid #808080;
 }
 
 /* Button */
@@ -83,25 +80,8 @@ st.markdown("""
 
 /* Sidebar */
 section[data-testid="stSidebar"]{
-    background:#E3F2FD;
-}
-
-section[data-testid="stSidebar"] h1{
-    color:#0D47A1;
-    font-size:28px;
-    font-weight:bold;
-}
-
-section[data-testid="stSidebar"] h2{
-    color:#1565C0;
-    font-size:22px;
-    font-weight:bold;
-}
-
-section[data-testid="stSidebar"] h3{
-    color:#2E7D32;
-    font-size:18px;
-    font-weight:bold;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
 }
 
 </style>
