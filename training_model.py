@@ -80,13 +80,6 @@ from google.colab import files
 files.download("customer_churn_model.pkl")
 files.download("label_encoders.pkl")
 
-print(model.feature_names_in_)
-
-df = pd.read_csv("telecom_customer_churn 1.csv")
-
-print(df.shape)
-print(df.columns.tolist())
-
 
 
 
