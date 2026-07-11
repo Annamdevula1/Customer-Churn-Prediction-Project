@@ -1,6 +1,6 @@
 # Customer-Churn-Prediction-Project
 
-project banner
+              project banner
 
 # 📊 Customer Churn Prediction
 
