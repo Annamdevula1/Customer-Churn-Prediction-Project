@@ -16,6 +16,8 @@ https://customer-churn-prediction-project-mxl5j3jvlkdydhlx9cyie9.streamlit.app/
 📸 Application Screenshots:
 <img width="1080" height="2400" alt="1000240342" src="https://github.com/user-attachments/assets/4cdd78fb-f57c-4090-b736-45a93b41ae5d" />
 
+<img width="1080" height="1653" alt="1000244168" src="https://github.com/user-attachments/assets/e7e89d5e-509e-4320-a566-0603ac4824b7" />
+
 
 
 ## 📌 Project Overview
