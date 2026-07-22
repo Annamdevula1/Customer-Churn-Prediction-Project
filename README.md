@@ -18,6 +18,21 @@ https://customer-churn-prediction-project-mxl5j3jvlkdydhlx9cyie9.streamlit.app/
 
 <img width="1080" height="1653" alt="1000244168" src="https://github.com/user-attachments/assets/e7e89d5e-509e-4320-a566-0603ac4824b7" />
 
+<img width="1080" height="2400" alt="1000243965" src="https://github.com/user-attachments/assets/f64edaf9-a84a-4c01-a889-99207019d6ce" />
+
+<img width="1080" height="1569" alt="1000243966" src="https://github.com/user-attachments/assets/0e49bfe3-3829-497a-b2e4-7bd66f8b27c6" />
+
+<img width="1080" height="2400" alt="1000243995" src="https://github.com/user-attachments/assets/ce03b642-b5c3-437d-aa68-ef32e9e70602" />
+
+<img width="1080" height="2400" alt="1000243968" src="https://github.com/user-attachments/assets/099ff3ef-13ff-49a3-9b2a-fd90a7484367" />
+
+<img width="1080" height="2400" alt="1000243969" src="https://github.com/user-attachments/assets/ccf2b267-e838-4df8-bcb1-7adafc3426d7" />
+
+
+
+
+
+
 
 
 ## 📌 Project Overview
