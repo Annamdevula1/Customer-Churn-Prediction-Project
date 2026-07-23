@@ -32,23 +32,7 @@ https://customer-churn-prediction-project-mxl5j3jvlkdydhlx9cyie9.streamlit.app/
 
 <img width="1080" height="2400" alt="1000243985" src="https://github.com/user-attachments/assets/844f7a41-e3aa-4ae2-9872-c8d338c0e57d" />
 
-<img width="1080" height="2400" alt="1000243970" src="https://github.com/user-attachments/assets/789d77a3-21ff-4c84-9629-f2f06d8ce97e" />
 
-<img width="1080" height="2400" alt="1000243971" src="https://github.com/user-attachments/assets/0d5bbb28-cf25-4639-b4dd-0334382bffd8" />
-
-<img width="1080" height="2400" alt="1000243972" src="https://github.com/user-attachments/assets/f9eb8a71-014b-4437-8d88-0e695087cea5" />
-
-<img width="1080" height="2400" alt="1000243973" src="https://github.com/user-attachments/assets/8ba2d393-c6ca-4089-8d94-a055e379fa4e" />
-
-<img width="1080" height="811" alt="1000243977" src="https://github.com/user-attachments/assets/5ce86c9e-dafc-451a-8bba-887da33ee4c3" />
-
-<img width="1080" height="1040" alt="1000243974" src="https://github.com/user-attachments/assets/b616c48d-6c28-494f-8138-0f9145414471" />
-
-<img width="1080" height="1040" alt="1000243974" src="https://github.com/user-attachments/assets/70eedd37-1232-4837-ad07-597ed760691a" />
-
-<img width="1080" height="505" alt="1000243976" src="https://github.com/user-attachments/assets/a9b83483-c530-4b56-8176-95ca3a2b89a3" />
-
-<img width="754" height="399" alt="1000243981" src="https://github.com/user-attachments/assets/de29371b-ef48-495b-928a-9612aaf378bc" />
 
 
 
