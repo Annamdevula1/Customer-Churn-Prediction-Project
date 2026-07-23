@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 # Load Dataset
-df = pd.read_csv("telecom_customer_churn 1.csv")
+df = pd.read_csv("telecom_customer_churn.csv")
 
 # Fill missing values
 df["Offer"] = df["Offer"].fillna("None")
