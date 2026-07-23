@@ -40,6 +40,14 @@ https://customer-churn-prediction-project-mxl5j3jvlkdydhlx9cyie9.streamlit.app/
 
 <img width="1080" height="2400" alt="1000243973" src="https://github.com/user-attachments/assets/12223395-06af-433f-a8f5-d196b2cd791b" />
 
+<img width="1080" height="811" alt="1000243977" src="https://github.com/user-attachments/assets/de29f3f1-1565-4901-8c3c-e8c5f7bccb12" />
+
+<img width="1080" height="1504" alt="1000244368" src="https://github.com/user-attachments/assets/64942845-d41c-4327-ac08-f7b9d3525283" />
+
+<img width="1080" height="915" alt="1000244369" src="https://github.com/user-attachments/assets/34baef78-2ae6-41c7-b3f7-afdcc9084b0c" />
+
+
+<img width="754" height="399" alt="1000243981" src="https://github.com/user-attachments/assets/f06cba48-7b16-4d91-84dd-87b47a093e62" />
 
 
 
