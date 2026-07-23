@@ -7,7 +7,8 @@ import joblib
 # ==========================================
 model = joblib.load("customer_churn_model.pkl")
 label_encoders = joblib.load("label_encoders.pkl")
-st.write(label_encoders.keys())
+st.write(type(label_encoders))
+st.write(label_encoders)
 st.stop()
 
 # ==========================================
