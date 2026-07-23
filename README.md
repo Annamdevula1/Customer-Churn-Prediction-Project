@@ -38,6 +38,8 @@ https://customer-churn-prediction-project-mxl5j3jvlkdydhlx9cyie9.streamlit.app/
 
 <img width="1080" height="2400" alt="1000244367" src="https://github.com/user-attachments/assets/fe1ba313-f38b-41be-a6ed-8266c1b5a0fc" />
 
+<img width="1080" height="2400" alt="1000243973" src="https://github.com/user-attachments/assets/12223395-06af-433f-a8f5-d196b2cd791b" />
+
 
 
 
