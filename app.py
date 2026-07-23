@@ -207,7 +207,7 @@ with st.form("customer_form"):
         offer = st.selectbox(
             "Offer",
             [
-                "None",
+                
                 "Offer A",
                 "Offer B",
                 "Offer C",
