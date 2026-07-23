@@ -393,7 +393,7 @@ with st.expander("📌 Project Information", expanded=False):
 # Encode Categorical Inputs
 # ==========================================
 if submitted:
-    gender = label_encoders["Gender"].transform([gender])[0]
+    Gender = label_encoders["Gender"].transform([gender])[0]
     married = label_encoders["Married"].transform([married])[0]
     offer = label_encoders["Offer"].transform([offer])[0]
     phone_service = label_encoders["Phone Service"].transform([phone_service])[0]
